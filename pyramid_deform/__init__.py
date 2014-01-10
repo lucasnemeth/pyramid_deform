@@ -457,7 +457,7 @@ class SessionFileUploadTempStore(object):
                 'hold uploaded files when form validation fails.')
         self.request = request
         self.session = request.session
-        self.tempstore = self.session.setdefault('substanced.tempstore', {})
+        self.tempstore = self.session.setdefault('pyramid_deform.tempstore', {})
         
     def preview_url(self, uid):
         return None
